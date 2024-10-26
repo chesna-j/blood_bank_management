@@ -81,26 +81,33 @@ button[type="submit"]:hover {
 .note{
   height: 100%;
   width: 30%;
-  margin-left: 32%;
+  margin-left: 33%;
   margin-top: 8%;
-  background-color:burlywood;
+  background-color:rgba(156, 194, 231, 0.6);
   padding-top: 1%;
-  padding-left: 2%;
   padding-bottom: 1%;
-  text-align: center;
+  
   /*display: flex;
   align-items: center;
   justify-content: column;*/
 }
 .table{
-  width: 30%;
-  height: auto;
-  margin:3%auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 3%;
 
 }
-.comp{
-  margin-left: 32%;
+.text{
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ color: #bc290f;
+  font-size: 200%;
+
 }
+/*.comp{
+  margin-left: 32%;
+}*/
 .back{
   margin-top: 30%;
   margin-left: 42%;
@@ -111,6 +118,7 @@ body{
   font-family: Arial;
 }
 nav{
+  
   position: fixed;
   top: 0;
   left: 0;
@@ -163,4 +171,103 @@ section{
   background: url(blood.jpg);
   background-size: cover;
   background-position: center;
+  
+  
 }
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+
+.content-table thead tr {
+  background-color: #ed4b4b;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+ 
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #ed4b4b;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #ed4b4b;
+ 
+}
+.card {
+  width: 300px; /* Set desired width */
+  height: 225px; /* Set desired height */
+  padding: 20px; /* Adds space inside the card */
+  margin: 20px auto; /* Centers the card horizontally and adds space around */
+  background: linear-gradient(0deg,#e69191,#ed4b4b); /* Optional background color */
+  border-radius: 8px; /* Optional rounded corners */
+  box-shadow: 0 4px 8px rgba(159, 150, 150, 0.1); /* Optional shadow */
+  text-align: center; /* Optional: centers the text */
+  box-sizing: border-box;
+  color: #2a2828;
+}
+
+
+
+nav ul {
+  position: relative; /* Ensure the dropdown is positioned relative to the menu */
+}
+
+nav ul li {
+  position: relative; /* Position each list item relative for the dropdown */
+}
+
+nav .dropdown {
+  display: none; /* Initially hide the dropdown */
+  position: absolute; /* Position it absolutely */
+  background: rgba(156, 194, 231, 0.8); /* Background color */
+  padding: 10px; /* Padding for dropdown items */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  border-radius: 5px; /* Rounded corners for dropdown */
+  z-index: 1; /* Ensure dropdown is above other elements */
+  height: 20px;
+}
+
+nav ul li:hover .dropdown {
+  display: block; /* Show dropdown on hover */
+}
+
+nav .dropdown li {
+  margin: 5px 0; /* Spacing for dropdown items */
+}
+
+nav .dropdown li a {
+  padding: 10px; /* Padding for dropdown links */
+  color: #fff; /* Dropdown link color */
+  text-decoration: none; /* No underline */
+  display: block; /* Make the link fill the dropdown item */
+}
+
+nav .dropdown li a:hover {
+  background: rgba(144, 179, 214, 0.8); /* Hover effect for dropdown links */
+}
+  

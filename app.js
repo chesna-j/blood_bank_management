@@ -254,9 +254,8 @@ app.delete('/blood/:donor_id', (req, res) => {
         res.status(204).send();
     });
 });
-//procedureee
 app.post('/call-procedure', (req, res) => {
-    const { no, value } = req.body; // these are the parameters for the procedure
+    const { no, value } = req.body;
 
     const query = 'CALL main(?, ?)';
     connection.query(query, [no, value], (err, results) => {
@@ -265,10 +264,17 @@ app.post('/call-procedure', (req, res) => {
             return res.status(500).json({ message: 'Internal server error' });
         }
 
-        // Procedure result will be in the first element of the results array
-        res.status(200).json(results[0]); 
+        // Check if results are returned and extract the blood type and count
+        if (results && results[0] && results[0][0]) {
+            const bloodType = results[0][0]['blood_type']; // Ensure column name matches
+            const availableUnits = results[0][0]['count1'] || 0; // Ensure column name matches
+            res.status(200).json({ bloodType, availableUnits }); 
+        } else {
+            res.status(404).json({ availableUnits: 0 });
+        }
     });
 });
+
 // Start the server
 app.listen(PORT,'0.0.0.0', () => {
     console.log(`Server is running on http://localhost:${PORT}`);

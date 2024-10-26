@@ -68,6 +68,10 @@ donorForm.addEventListener('submit', (e) => {
     .then(data => {
         // After donor is created, send blood data
         const donorId = data.id; // Get the donor ID from response (make sure your backend returns the ID)
+
+        const donorIdDisplay = document.getElementById('donorIdDisplay');
+        donorIdDisplay.innerHTML = `<p>Donor ID: ${donorId}</p>`;
+        
         return fetch('http://localhost:3000/blood', { // Use the blood endpoint
             method: 'POST',
             headers: {

@@ -12,6 +12,13 @@
         <h1>BLOOD BANK MANAGEMENT SYSTEM</h1>
         <ul>
             <li><a  href index.html="">Home</a></li>
+            <li>
+                <a href="#">Menu</a>
+                <ul class="dropdown">
+                    <li><a href="dlt_donor.html">Delete</a></li> <!-- Add the Delete option -->
+                    <!-- You can add more options here if needed -->
+                </ul>
+            </li>
             <li><a  href="">About</a></li>
             <li><a  href="">Contact</a></li>
             <li><a  href="login.html">Login</a></li>
@@ -31,77 +38,86 @@
     </section>
     
 
-    <div class="note">
-        <p>LEARN ABOUT DONATION</p>
-        <br>
-        <p>After donating blood,the body works to replenish  blood loss.
-            This stimulates the production of new blood cells and in turn,helps 
-             in maintaining good health.</p>
-    </div>
+    
     <div class="table">
         
-            <p>COMPATIBLE BLOOD TYPE DONORS</p>
+            <p class="text">COMPATIBLE BLOOD TYPE DONORS</p>
         
        
     </div>
-    <table class="comp" bgcolor="brown" width="400">
-    
-        <tr bgcolor="lightgrey">
-            <th width="150">Blood Type</th>
-            <th width="150">Donate Blood To</th>
-            <th width="150">Recieve Blood From</th>
+    <table class="content-table"  >
+        <thead>
+            <tr >
+            <th width=>Blood Type</th>
+            <th width=>Donate Blood To</th>
+            <th width=>Recieve Blood From</th>
         </tr>
-        <tr bgcolor=" white" align="center">
+        </thead>
+        <tbody>
+            
+        <tr>
             <td>A+</td>
             <td>A+,AB+</td>
             <td>A+,A-,O+,O-</td>
 
         </tr>
-        <tr bgcolor=" white" align="center">
+        <tr class="active-row">
             <td>O+</td>
             <td>O+,A+,B+,AB+</td>
             <td>O+,O-</td>
 
         </tr>
-        <tr bgcolor=" white" align="center">
+        <tr >
             <td>B+</td>
             <td>B+,AB+</td>
             <td>B+,B-,O+,O-</td>
 
         </tr>
-        <tr bgcolor=" white" align="center">
+        <tr class="active-row" >
             <td>AB+</td>
             <td>AB+</td>
             <td>Everyone</td>
 
         </tr>
-        <tr bgcolor=" white" align="center">
+        <tr >
             <td>O-</td>
             <td>Everyone</td>
             <td>O-</td>
 
         </tr>
-        <tr bgcolor=" white" align="center">
+        <tr class="active-row">
             <td>A-</td>
             <td>A+,A-,AB+,AB-</td>
             <td>A-,O-</td>
 
         </tr>
-        <tr bgcolor=" white" align="center">
+        <tr >
             <td>B-</td>
             <td>B+,B-,AB+,AB-</td>
             <td>B-,O-</td>
 
         </tr>
-        <tr bgcolor=" white" align="center">
+        <tr class="active-row" >
             <td>AB-</td>
             <td>AB+,AB-</td>
             <td>AB-,A-,B-,O-</td>
 
         </tr>
+        </tbody>
+    
+        
        
         
 </table>
-<script src="script.js"></script>
+<div class="card">
+    <h4>LEARN MORE ABOUT DONATION</h4>
+    <p>After donating blood,the body works to replenish  blood loss.
+        This stimulates the production of new blood cells and in turn,helps 
+         in maintaining good health.</p>
+</div>
+</div>
+
+
+<script src="index.js"></script>
 </body>
 </html>

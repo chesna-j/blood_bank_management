@@ -70,8 +70,8 @@ document.getElementById('patient-form').addEventListener('submit', function(even
             value: bloodType // Use the blood type
         };
 
-        // Call the stored procedure
-        return fetch('http://localhost:3000/call-procedure', {
+         // Call the stored procedure
+         return fetch('http://localhost:3000/call-procedure', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -86,9 +86,25 @@ document.getElementById('patient-form').addEventListener('submit', function(even
         return response.json();
     })
     .then(data => {
-        // Display success message
-        document.getElementById('response-message').innerText = 'Patient registered and procedure executed successfully! Result: ' + JSON.stringify(data);
+        console.log('Procedure Call Response:', data); // Log the response for debugging
+    
+        // Ensure the data has the expected properties with fallback values
+        const bloodType = data.bloodType; // No fallback to 'Unknown' here
+        const availableUnits = data.availableUnits || 0; // Default to 0 if availableUnits is null or undefined
+    
+        // Format the message conditionally
+        let formattedMessage = '';
+        
+        if (bloodType) {
+            formattedMessage = `Blood Type: ${bloodType} has ${availableUnits} units available in the blood bank.`;
+        } else {
+            formattedMessage = `No valid blood type available. ${availableUnits} units available in the blood bank.`;
+        }
+    
+        // Display the formatted message
+        document.getElementById('response-message').innerText = formattedMessage;
     })
+    
     .catch(error => {
         // Display error message
         document.getElementById('response-message').innerText = 'Error: ' + error.message;
