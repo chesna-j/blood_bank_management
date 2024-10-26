@@ -77,13 +77,18 @@ body {
   }
 
 
-
   .back-symbol
   {
     text-decoration: none;
     color: black;
+    font-size: 20px;
+    padding: 10px;
   }
-
+  
+  .back-symbol:hover
+  {
+      background-color: #c14b3e;
+  }
 
   #response-message {
     margin-top: 20px;
