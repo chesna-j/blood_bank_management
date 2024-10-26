@@ -55,7 +55,7 @@ button:hover {
     width: 80%; /* Ensure it matches form width */
     border-radius: 5px;
     text-align: center;
-    display: inline-block; /* Allows the content to be centered within */
+    display: block; /* Allows the content to be centered within */
 }
 
 .back-symbol

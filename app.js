@@ -87,6 +87,18 @@ app.get('/donors', (req, res) => {
     });
 });
 
+// Check for a specific donor by ID
+app.get('/donors/:id', (req, res) => {
+    const id = req.params.id; // Extract donor ID from request parameters
+    const query = 'SELECT * FROM donor WHERE donor_id = ?'; // Query to find donor
+
+    connection.query(query, [id], (err, results) => {
+        if (err) return res.status(500).send(err); // Handle SQL errors
+        if (results.length === 0) return res.status(404).send('Donor not found'); // No donor found
+        res.json(results[0]); // Send back the found donor
+    });
+});
+
 // Update a Donor
 app.put('/donors/:id', (req, res) => {
     const { id } = req.params;

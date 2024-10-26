@@ -9,10 +9,23 @@ document.getElementById('deleteButton').addEventListener('click', function() {
 
 // Function to delete a donor and their associated blood records
 function deleteDonor(donorId) {
-    console.log(`Deleting donor with ID: ${donorId}`); // Log the donor ID being deleted
+    console.log(`Checking for donor with ID: ${donorId}`); // Log the donor ID being checked
 
-    // First, delete related records in the blood table
-    fetch(`http://localhost:3000/blood/${donorId}`, { method: 'DELETE' }) // Send DELETE request for blood records
+    // First, check if the donor exists
+    fetch(`http://localhost:3000/donors/${donorId}`)
+        .then(response => {
+            if (!response.ok) {
+                // If the donor does not exist, handle it
+                if (response.status === 404) {
+                    document.getElementById('message').textContent = 'Donor not present.'; // Donor not found
+                } else {
+                    throw new Error('Error checking donor presence'); // Handle other errors
+                }
+                return Promise.reject(); // Exit the chain if donor not found
+            }
+            // If the donor exists, proceed to delete related records in the blood table
+            return fetch(`http://localhost:3000/blood/${donorId}`, { method: 'DELETE' });
+        })
         .then(response => {
             // Check if blood records were deleted successfully or if they didn't exist
             if (response.ok || response.status === 404) {
@@ -34,6 +47,8 @@ function deleteDonor(donorId) {
         })
         .catch(error => {
             console.error('Error:', error); // Log error
-            document.getElementById('message').textContent = 'An error occurred. Please try again.'; // Generic error message
+            if (error.message !== 'Error checking donor presence') {
+                document.getElementById('message').textContent = 'An error occurred. Please try again.'; // Generic error message
+            }
         });
 }
