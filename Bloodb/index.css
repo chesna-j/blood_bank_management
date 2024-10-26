@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 600px;
+    
+   
+  }
+  
+  /*h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+  }*/
+  
+  .buttons {
+    margin-top: 100px;
+    padding: 125px;
+    
+  }
+  
+  button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #d13014;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    
+    
+  }
+  
+  button:hover {
+    background-color: rgb(224, 79, 79);
+  }
+  
+  .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  .note{
+    height: 100%;
+    width: 30%;
+    margin-left: 33%;
+    margin-top: 8%;
+    background-color:rgba(156, 194, 231, 0.6);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    
+    /*display: flex;
+    align-items: center;
+    justify-content: column;*/
+  }
+  .table{
+    width: 50%;
+    height: 100%;
+    margin-left: 30%;
+    margin-top: 3%;
+    
+  
+  }
+  .text{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: #bc290f;
+    font-size: 200%;
+  
+  }
+  /*.comp{
+    margin-left: 32%;
+  }*/
+  .back{
+    margin-top: 30%;
+    margin-left: 42%;
+  }
+  body{
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial;
+  }
+  nav{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 90px;
+    box-sizing: border-box;
+    background: rgba(156, 194, 231, 0.6);
+    border-bottom: 1px solid #fff;
+  }
+  
+  h1{
+    margin: top 25px;;
+    color: rgb(10, 20, 103);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  nav.logo{
+    padding: 22px 20px;
+    height: 80px;
+    float: left;
+    font-size: 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #b5422e;
+  }
+  nav ul{
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  nav ul li a{
+    line-height: 0px;
+    bottom: 3px;
+    color: #fff;
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  nav ul li a:hover{
+    background: rgba(255, 13, 13, 0.7);
+    border-radius: 6px;
+  }
+  section{
+    width: 100%;
+    height: 100vh;
+    background: url(blood.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    
+  }
+  
+  .content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+   
+  }
+  
+  .content-table thead tr {
+    background-color: #ed4b4b;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+   
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #ed4b4b;
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #ed4b4b;
+   
+  }
+  .card {
+    width: 300px; /* Set desired width */
+    height: 225px; /* Set desired height */
+    padding: 20px; /* Adds space inside the card */
+    margin: 20px auto; /* Centers the card horizontally and adds space around */
+    background: linear-gradient(0deg,#e69191,#ed4b4b); /* Optional background color */
+    border-radius: 8px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    text-align: center; /* Optional: centers the text */
+    box-sizing: border-box;
+  
+  }
+
+
+
+  nav ul {
+    position: relative; /* Ensure the dropdown is positioned relative to the menu */
+  }
+  
+  nav ul li {
+    position: relative; /* Position each list item relative for the dropdown */
+  }
+  
+  nav .dropdown {
+    display: none; /* Initially hide the dropdown */
+    position: absolute; /* Position it absolutely */
+    background: rgba(156, 194, 231, 0.8); /* Background color */
+    padding: 10px; /* Padding for dropdown items */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    border-radius: 5px; /* Rounded corners for dropdown */
+    z-index: 1; /* Ensure dropdown is above other elements */
+    height: 20px;
+  }
+  
+  nav ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+  }
+  
+  nav .dropdown li {
+    margin: 5px 0; /* Spacing for dropdown items */
+  }
+  
+  nav .dropdown li a {
+    padding: 10px; /* Padding for dropdown links */
+    color: #fff; /* Dropdown link color */
+    text-decoration: none; /* No underline */
+    display: block; /* Make the link fill the dropdown item */
+  }
+  
+  nav .dropdown li a:hover {
+    background: rgba(144, 179, 214, 0.8); /* Hover effect for dropdown links */
+  }
+    
+    
