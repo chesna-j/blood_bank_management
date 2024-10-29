@@ -219,14 +219,14 @@ section{
  
 }
 .card {
-  width: 300px; /* Set desired width */
-  height: 225px; /* Set desired height */
-  padding: 20px; /* Adds space inside the card */
-  margin: 20px auto; /* Centers the card horizontally and adds space around */
-  background: linear-gradient(0deg,#e69191,#ed4b4b); /* Optional background color */
-  border-radius: 8px; /* Optional rounded corners */
-  box-shadow: 0 4px 8px rgba(159, 150, 150, 0.1); /* Optional shadow */
-  text-align: center; /* Optional: centers the text */
+  width: 300px; 
+  height: 225px;
+  padding: 20px; 
+  margin: 20px auto;
+  background: linear-gradient(0deg,#e69191,#ed4b4b); 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(159, 150, 150, 0.1);
+  text-align: center;
   box-sizing: border-box;
   color: #2a2828;
 }
@@ -234,40 +234,40 @@ section{
 
 
 nav ul {
-  position: relative; /* Ensure the dropdown is positioned relative to the menu */
+  position: relative;
 }
 
 nav ul li {
-  position: relative; /* Position each list item relative for the dropdown */
+  position: relative; 
 }
 
 nav .dropdown {
-  display: none; /* Initially hide the dropdown */
-  position: absolute; /* Position it absolutely */
-  background: rgba(156, 194, 231, 0.8); /* Background color */
-  padding: 10px; /* Padding for dropdown items */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
-  border-radius: 5px; /* Rounded corners for dropdown */
-  z-index: 1; /* Ensure dropdown is above other elements */
+  display: none;
+  position: absolute;
+  background: rgba(156, 194, 231, 0.8); 
+  padding: 10px; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 5px;
+  z-index: 1; 
   height: 20px;
 }
 
 nav ul li:hover .dropdown {
-  display: block; /* Show dropdown on hover */
+  display: block; 
 }
 
 nav .dropdown li {
-  margin: 5px 0; /* Spacing for dropdown items */
+  margin: 5px 0; 
 }
 
 nav .dropdown li a {
-  padding: 10px; /* Padding for dropdown links */
-  color: #fff; /* Dropdown link color */
-  text-decoration: none; /* No underline */
-  display: block; /* Make the link fill the dropdown item */
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
 }
 
 nav .dropdown li a:hover {
-  background: rgba(144, 179, 214, 0.8); /* Hover effect for dropdown links */
+  background: rgba(144, 179, 214, 0.8); 
 }
   

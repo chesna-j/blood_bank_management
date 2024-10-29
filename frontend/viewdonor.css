@@ -1,44 +1,44 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8; /* Light grey background */
-    color: #333; /* Dark text for better contrast */
+    background-color: #f8f8f8; 
+    color: #333; 
     margin: 20px;
 }
 
 h1 {
-    color: #c0392b; /* Dark red */
+    color: #c0392b; 
     text-align: center;
     margin-bottom: 20px;
 }
 
 table {
     width: 100%;
-    border-collapse: collapse; /* Merges adjacent borders */
+    border-collapse: collapse; 
     margin-top: 20px;
-    background-color: #fff; /* White background for the table */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
 
 th, td {
     padding: 15px;
     text-align: left;
-    border: 1px solid #ddd; /* Light border */
+    border: 1px solid #ddd; 
 }
 
 th {
-    background-color: #c0392b; /* Dark red for header */
-    color: white; /* White text for headers */
+    background-color: #c0392b; 
+    color: white; 
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2; /* Light grey background for alternate rows */
+    background-color: #f2f2f2; 
 }
 
 tr:hover {
-    background-color: #ffe6e6; /* Light red background on hover */
+    background-color: #ffe6e6; 
 }
 
-/* Optional: Add button styles for any future button elements */
+
 button {
     padding: 10px 15px;
     background-color: #c0392b; /* Dark red */
@@ -50,7 +50,7 @@ button {
 }
 
 button:hover {
-    background-color: #a93226; /* Darker red on hover */
+    background-color: #a93226; 
 }
 
 .back-symbol

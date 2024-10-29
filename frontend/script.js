@@ -1,15 +1,15 @@
 const donorForm = document.getElementById('donorForm');
 const donorsList = document.getElementById('donors');
 
-// Fetch donors when the page loads
+
 document.addEventListener('DOMContentLoaded', () => {
         fetchBloodBanks(); // Fetch blood banks when the page loads
 });
 
 
-// Function to fetch blood banks from the backend and populate the dropdown
+
 function fetchBloodBanks() {
-    fetch('http://localhost:3000/blood_banks') // Adjust your server URL
+    fetch('http://localhost:3000/blood_banks')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -40,7 +40,7 @@ donorForm.addEventListener('submit', (e) => {
         weight: document.getElementById('weight').value,
         blood_pressure: document.getElementById('bloodPressure').value,
         iron_content: document.getElementById('ironContent').value,
-        doctor_id: document.getElementById('doctorId').value, // Get doctor_id from the input field
+        doctor_id: document.getElementById('doctorId').value, // Get doctor_id should be the ones in backend
     };
 
     // Create blood object
@@ -49,7 +49,7 @@ donorForm.addEventListener('submit', (e) => {
         blood_bank_id: document.getElementById('bloodBankId').value
     };
 
-    console.log("Submitting donor data:", donorData); // Log donor data before sending
+    console.log("Submitting donor data:", donorData);
 
     // Send the donor object to the server
     fetch('http://localhost:3000/donors', { // Adjust your server's IP address
@@ -100,16 +100,16 @@ donorForm.addEventListener('submit', (e) => {
     });
 });
 
-// Function to delete a donor
+// Function to delete a donor not require here for further updation
 function deleteDonor(donorId) {
-    console.log(`Deleting donor with ID: ${donorId}`); // Log donor ID before deletion
-    fetch(`http://localhost:3000/donors/${donorId}`, { // Adjust your server's IP address
+    console.log(`Deleting donor with ID: ${donorId}`); // 
+    fetch(`http://localhost:3000/donors/${donorId}`, { 
         method: 'DELETE',
     })
     .then(response => {
         if (response.ok) {
             console.log('Donor deleted successfully');
-            fetchDonors(); // Refresh the list after deletion
+            fetchDonors(); 
         } else {
             console.error('Failed to delete donor:', response.statusText);
         }

@@ -1,8 +1,8 @@
 const donorsTableBody = document.getElementById('donors');
 
-// Function to fetch donors from the server
+
 function fetchDonors() {
-    fetch('http://localhost:3000/donors') // Adjust your server's IP address
+    fetch('http://localhost:3000/donors')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -10,16 +10,16 @@ function fetchDonors() {
             return response.json();
         })
         .then(data => {
-            console.log(data); // Log data to check structure
-            donorsTableBody.innerHTML = ''; // Clear the table body
+            console.log(data);
+            donorsTableBody.innerHTML = ''; 
             data.forEach(donor => {
                 const row = document.createElement('tr');
 
-                // Format the DOB without timestamp
+            
                 const dob = new Date(donor.DOB);
                 const formattedDOB = dob.toISOString().split('T')[0]; // This gets YYYY-MM-DD
 
-                // Create table cells for each piece of donor data
+                
                 row.innerHTML = `
                     <td>${donor.donor_name}</td>
                     <td>${donor.gender}</td>
@@ -32,7 +32,7 @@ function fetchDonors() {
                     <td>${donor.doctor_id}</td>
                 `;
 
-                // Append the row to the table body
+                
                 donorsTableBody.appendChild(row);
             });
         })

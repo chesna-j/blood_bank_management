@@ -14,11 +14,11 @@ body {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background: #e33719; /* Semi-transparent background for contrast */
+    background: #e33719;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     color: #fff;
-    text-align: center; /* Center all text inside container */
+    text-align: center; 
 }
 
 h1, h2 {
@@ -28,11 +28,11 @@ h1, h2 {
 form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the form elements */
+    align-items: center; 
 }
 
 input, select, button {
-    width: 80%; /* Adjust width as needed */
+    width: 80%; 
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
@@ -52,10 +52,10 @@ button:hover {
 .message {
     margin-top: 20px;
     padding: 10px;
-    width: 80%; /* Ensure it matches form width */
+    width: 80%; 
     border-radius: 5px;
     text-align: center;
-    display: block; /* Allows the content to be centered within */
+    display: block; 
 }
 
 .back-symbol
